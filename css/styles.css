@@ -41,6 +41,11 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: 2px dashed #0A775F;
+  outline-offset: 5px;
+}
+
 h2, h3, h4 {
   text-transform: uppercase;
 }
@@ -61,7 +66,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -126,6 +131,15 @@ header {
   line-height: 14px;
   letter-spacing: 1px;
   color: #333333;
+  transition: 0.2s;
+}
+
+.header-nav-link:hover {
+  color: #0A775F;
+}
+
+.header-nav-link:active {
+  opacity: 0.7;
 }
 
 .header-nav li:not(:last-child) {
@@ -134,7 +148,23 @@ header {
 
 .header-inner-title {
   padding: 0 100px;
+}
+
+.header-inner-title-wrapper {
+  height: 100%;
   position: relative;
+}
+
+.header-inner-title-wrapper::before {
+  content: "";
+  background-image: url(..//img/Coffeeroasters-emblame.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 214px;
+  height: 214px;
+  position: absolute;
+  top: -265px;
+  right: -120px;
 }
 
 .header-inner-title-head {
@@ -165,25 +195,22 @@ header {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #FFFFFF;
+  transition: 0.2s;
+}
+
+.header-inner-link:hover {
+  color: #C99B67;
+}
+
+.header-inner-link:active {
+  opacity: 0.7;
 }
 
 .header-inner-img {
   width: 710px;
-  height: 696px;
   margin-right: -50px;
 }
 
-.header-inner-title::before {
-  content: "";
-  background-image: url(..//img/Coffeeroasters-emblame.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 214px;
-  height: 214px;
-  position: absolute;
-  top: -260px;
-  right: -120px;
-}
 
 .header-inner-picture {
   width: 710px;
@@ -196,8 +223,8 @@ header {
   padding-top: 20px;
 }
 
-/* PRODUCTS */
-.products {
+/* hero */
+.hero {
   text-align: center;
   background: #F8F8F2;
   width: 1400px;
@@ -207,7 +234,7 @@ header {
   position: relative;
 }
 
-.products::before {
+.hero::before {
   content: "";
   background: url(..//img/Vector2.png);
   background-size: cover;
@@ -219,7 +246,7 @@ header {
   right: -30px;
 }
 
-.products::after {
+.hero::after {
   content: "";
   background: url(..//img/Vector3.png);
   background-repeat: no-repeat;
@@ -230,11 +257,11 @@ header {
   bottom: 170px;
 }
 
-.products-wrapper {
+.hero-wrapper {
   position: relative;
 }
 
-.products-wrapper::before {
+.hero-wrapper::before {
   content: "";
   background: url(..//img/Vector.png);
   background-size: cover;
@@ -246,7 +273,7 @@ header {
   left: -315px;
 }
 
-.products-header {
+.hero-header {
   text-align: center;
   margin: 0;
   padding: 50px;
@@ -255,41 +282,41 @@ header {
   line-height: 59px;
 }
 
-.products-wrapper {
+.hero-wrapper {
   padding: 0;
   margin: 30px 255px 0;
   padding-bottom: 50px;
 }
 
-.products-items {
+.hero-items {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
 }
 
-.products-items:nth-child(even) {
+.hero-items:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.products-items-img {
+.hero-items-img {
   width: 450px;
   height: 375px;
   margin-right: 117px;
   margin-left: -133px;
 }
 
-.products-items:nth-child(even) img {
+.hero-items:nth-child(even) img {
   margin-right: -133px;
   margin-left: 117px;
 }
 
-.products-items-title-wrapper {
+.hero-items-title-wrapper {
   width: 400px;
   text-align: left;
 }
 
-.products-items-head {
+.hero-items-head {
   margin: 0 0 10px;
   font-weight: 500;
   font-size: 48px;
@@ -298,7 +325,7 @@ header {
   color: #333333;
 }
 
-.products-items-title {
+.hero-items-title {
   margin: 0;
   width: 100%;
   font-size: 22px;
@@ -491,6 +518,14 @@ header {
   background-color: #C99B67;
 }
 
+.hiw *:focus {
+  outline: 2px dashed #C99B67;
+}
+
+.hiw .header-inner-link:hover {
+  color: #0A775F;
+}
+
 /* FOOTER */
 footer {
   background-color: #F3D7B7;
@@ -556,17 +591,17 @@ only screen and (min-resolution: 2dppx) {
     background-size: cover;
   }
 
-  .products::before {
+  .hero::before {
     background: url(..//img/Vector2@2x.png);
     background-size: cover;
   }
 
-  .products::after {
+  .hero::after {
     background: url(..//img/Vector3@2x.png);
     background-size: cover;
   }
 
-  .products-wrapper::before {
+  .hero-wrapper::before {
     background: url(..//img/Vector@2x.png);
     background-size: cover;
   }
@@ -581,4 +616,238 @@ only screen and (min-resolution: 2dppx) {
     background-size: cover;
   }
 
+  .branch-items:first-child::before {
+    background: url(../img/Britain-map@2x.png);
+    background-size: cover;
+  }
+
+  .branch-items:nth-child(2)::before {
+    background: url(../img/Canada-map@2x.png);
+    background-size: cover;
+  }
+
+  .branch-items:last-child::before {
+    background: url(../img/Australia-map@2x.png);
+    background-size: cover;
+  }
+
+}
+
+/* ABOUT US */
+/* HERO-AU */
+.hero-au {
+  text-align: center;
+  background: #F8F8F2;
+  width: 1400px;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  margin: 0 auto 160px;
+  position: relative;
+}
+
+.hero-inner-au {
+  display: flex;
+  align-items: center;
+  padding: 160px 34px 200px 135px;
+  text-align: left;
+  position: relative;
+}
+
+.hero-inner-au::before {
+  content: "";
+  background: url(..//img/Vector.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 240px;
+  height: 370px;
+  top: 50px;
+  left: -50px;
+  z-index: 0;
+}
+
+.hero-inner-img-au {
+  width: 360px;
+  height: 364px;
+  z-index: 1;
+}
+
+.hero-inner-title-wrapper-au {
+  width: 626px;
+  margin-left: 185px;
+}
+
+.hero-inner-head-au {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  font-variant: small-caps;
+  color: #000000;
+  margin: 0 0 24px;
+}
+
+.hero-inner-title-au {
+  font-size: 18px;
+  line-height: 30px;
+  color: #333333;
+  margin: 0;
+}
+
+/* QUALITY */
+.quality {
+  text-align: left;
+  background: #C99B67;
+  width: 1400px;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  margin: 0 auto 20px;
+  padding: 100px 0 118px 113px;
+}
+
+.quality-inner-wrapper {
+  display: flex;
+}
+
+.quality-inner {
+  margin-right: 38px;
+  color: #fff;
+}
+
+.quality-inner-header {
+  width: 400px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  font-variant: small-caps;
+  margin: 0 0 24px;
+}
+
+.quality-inner-text {
+  width: 638px;
+  font-size: 18px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.quality-inner-img {
+  width: 550px;
+  height: 500px;
+  margin-top: -180px;
+}
+
+/* BRANCH */
+.branch {
+  text-align: center;
+  background: #0A775F;
+  width: 1400px;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  margin: 0 auto 50px;
+  padding: 50px 0 100px;
+}
+
+.branch-header {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  font-variant: small-caps;
+  color: #FFFFFF;
+  margin: 0 0 80px;
+}
+
+.branch-items-wrapper {
+  margin: 0;
+  display: flex;
+}
+
+.branch-items {
+  width: 433px;
+  height: 396px;
+  padding: 40px 20px;
+  margin: auto 0 0;
+  text-align: left;
+  position: relative;
+  color: #333333;
+  background-color: #fff;
+  padding-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.branch-items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.branch-items:first-child::before {
+  content: "";
+  position: absolute;
+  background: url(../img/Britain-map.png);
+  width: 120px;
+  height: 143px;
+  top: 45px;
+  right: 55px;
+}
+
+.branch-items:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: url(../img/Canada-map.png);
+  width: 120px;
+  height: 120px;
+  top: 45px;
+  right: 55px;
+}
+
+.branch-items:last-child::before {
+  content: "";
+  position: absolute;
+  background: url(../img/Australia-map.png);
+  width: 120px;
+  height: 107px;
+  top: 45px;
+  right: 55px;
+}
+
+.branch-items-header {
+  width: 190px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  font-variant: small-caps;
+  margin: 0 0 10px;
+}
+
+.branch-items-text {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+/* CREAT YOUR PLAN */
+/* JUST */
+.just .hiw {
+  padding: 100px 0 80px;
+  margin-bottom: 20px;
+}
+
+.just .hiw::after {
+  content: none;
+}
+
+.just .hiw-list {
+  margin-bottom: 0;
+}
+
+/* HREO-CP */
+
+.hero-cp {
+  width: 1400px;
+  background: #0A775F;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  margin: 0 auto 50px;
+  padding: 50px 0;
 }

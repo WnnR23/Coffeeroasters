@@ -5,23 +5,59 @@ html {
   scroll-behavior: smooth;
 }
 
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/roboto-v29-latin-regular.woff2") format("woff2"),
+    url("../fonts/roboto-v29-latin-regular.woff") format("woff");
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("../fonts/roboto-v29-latin-500.woff2") format("woff2"),
+    url("../fonts/roboto-v29-latin-500.woff") format("woff");
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/roboto-v29-latin-700.woff2") format("woff2"),
+    url("../fonts/roboto-v29-latin-700.woff") format("woff");
+}
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
 body {
+  min-width: 1440px;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
   color: #222;
+
 }
 
 img {
@@ -29,19 +65,520 @@ img {
   height: auto;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
 
 /* CONTAINER */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1400px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
+/* HEADER */
+header {
+  width: 100%;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  background-color: #F3D7B7;
+}
+
+.header-top {
+  padding: 40px 0;
+}
+
+.logo-link {
+  display: flex;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-seeds {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.logo-title {
+  width: 203px;
+  height: 24px;
+}
+
+.header-nav {
+  display: flex;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #333333;
+}
+
+.header-nav li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header-inner-title {
+  padding: 0 100px;
+  position: relative;
+}
+
+.header-inner-title-head {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  color: #000000;
+  margin: 0 0 24px;
+}
+
+.header-inner-title-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 34px;
+}
+
+.header-inner-link {
+  display: inline-block;
+  text-decoration: none;
+  background: #0A775F;
+  border-radius: 100px;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.header-inner-img {
+  width: 710px;
+  height: 696px;
+  margin-right: -50px;
+}
+
+.header-inner-title::before {
+  content: "";
+  background-image: url(..//img/Coffeeroasters-emblame.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 214px;
+  height: 214px;
+  position: absolute;
+  top: -260px;
+  right: -120px;
+}
+
+.header-inner-picture {
+  width: 710px;
+  height: 696px;
+}
 
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 20px;
+}
+
+/* PRODUCTS */
+.products {
+  text-align: center;
+  background: #F8F8F2;
+  width: 1400px;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.products::before {
+  content: "";
+  background: url(..//img/Vector2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 135px;
+  height: 431px;
+  top: 700px;
+  right: -30px;
+}
+
+.products::after {
+  content: "";
+  background: url(..//img/Vector3.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 140px;
+  height: 300px;
+  left: -30px;
+  bottom: 170px;
+}
+
+.products-wrapper {
+  position: relative;
+}
+
+.products-wrapper::before {
+  content: "";
+  background: url(..//img/Vector.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 240px;
+  height: 370px;
+  top: -150px;
+  left: -315px;
+}
+
+.products-header {
+  text-align: center;
+  margin: 0;
+  padding: 50px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+}
+
+.products-wrapper {
+  padding: 0;
+  margin: 30px 255px 0;
+  padding-bottom: 50px;
+}
+
+.products-items {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.products-items:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.products-items-img {
+  width: 450px;
+  height: 375px;
+  margin-right: 117px;
+  margin-left: -133px;
+}
+
+.products-items:nth-child(even) img {
+  margin-right: -133px;
+  margin-left: 117px;
+}
+
+.products-items-title-wrapper {
+  width: 400px;
+  text-align: left;
+}
+
+.products-items-head {
+  margin: 0 0 10px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  /* font-variant: small-caps; */
+  color: #333333;
+}
+
+.products-items-title {
+  margin: 0;
+  width: 100%;
+  font-size: 22px;
+  line-height: 34px;
+  color: #333333;
+}
+
+/* WHY CHOOSE US */
+.whycu {
+  text-align: center;
+  background: #C99B67;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  width: 1400px;
+  height: 700px;
+  padding-top: 50px;
+  margin: 0 auto 290px;
+  color: #fff;
+}
+
+.whycu-header {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  margin: 0 0 10px;
+}
+
+.whycu-text {
+  font-size: 16px;
+  line-height: 28px;
+  display: inline-block;
+  width: 580px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  margin: 0 0 80px;
+}
+
+.whycu-list {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.whycu-list::before {
+  content: "";
+  position: absolute;
+  background: url(..//img/but-first-coffee-smash.png);
+  width: 140px;
+  height: 144px;
+  top: -50px;
+  left: -50px;
+
+}
+
+.whycu-items {
+  margin: 0;
+  padding: 0;
+  width: 433px;
+  height: 630px;
+}
+
+.whycu-items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.whycu-items-img {
+  width: 433px;
+  height: 500px;
+  margin-bottom: 28px;
+}
+
+.whycu-items-header {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  font-variant: small-caps;
+  color: #333333;
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.whycu-itmes-text {
+  font-size: 18px;
+  line-height: 28px;
+  color: #333333;
+  text-align: left;
+  margin: 0;
+}
+
+/* HOW IT WORKS */
+.hiw {
+  text-align: center;
+  background: #0A775F;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  width: 1400px;
+  padding: 50px 0;
+  margin: 0 auto 50px;
+  color: #fff;
+  position: relative;
+}
+
+.hiw::after {
+  content: "";
+  position: absolute;
+  background: url(..//img/but-first-coffee.png);
+  width: 227px;
+  height: 192px;
+  top: 41px;
+  right: 68px;
+}
+
+.hiw-header {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  margin: 0 0 110px;
+}
+
+.hiw-devider {
+  height: 0;
+  border: 1px dashed #C99B67;
+  width: 890px;
+  margin: 0 auto 50px 30px;
+}
+
+.hiw-list {
+  display: flex;
+  padding: 0;
+  margin: 0 0 60px;
+}
+
+.hiw-items {
+  width: 433px;
+  height: 396px;
+  background: #F8F8F2;
+  padding: 20px 20px 40px;
+  position: relative;
+}
+
+.hiw-items::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 0;
+  top: -82px;
+  background: #F8F8F2;
+  border: 4px solid #C99B67;
+}
+
+.hiw-items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.hiw-items-number {
+  display: inline-block;
+  font-size: 64px;
+  line-height: 75px;
+  font-variant: small-caps;
+  color: #333333;
+  display: flex;
+  justify-content: right;
+  margin: 0 0 45px;
+  opacity: 0.8;
+}
+
+.hiw-items-header {
+  width: 251px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  font-variant: small-caps;
+  color: #333333;
+  margin: 0 0 10px;
+}
+
+.hiw-items-text {
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
+  color: #333333;
+  margin: 0;
+}
+
+.hiw .header-inner-link {
+  background-color: #C99B67;
+}
+
+/* FOOTER */
+footer {
+  background-color: #F3D7B7;
+  background-image: url(../img/generaly-bg.png);
+  background-blend-mode: overlay;
+  padding: 65px 0;
+  box-sizing: border-box;
+}
+
+.header-nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #333333;
+}
+
+.header-nav li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.footer-sm-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-sm-items {
+  display: flex;
+}
+
+.footer-sm-items:not(:last-child) {
+  margin-right: 30px;
+}
+
+.facebook-icon-link {
+  width: 30px;
+  height: 30px;
+
+}
+
+.twitter-icon-link {
+  width: 30px;
+  height: 25px;
+}
+
+.instagram-icon-link {
+  width: 30px;
+  height: 30px;
+}
+
+/* MEDIA */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .header-inner-title::before {
+    background-image: url(..//img/Coffeeroasters-emblame@2x.png);
+    background-size: cover;
+  }
+
+  .products::before {
+    background: url(..//img/Vector2@2x.png);
+    background-size: cover;
+  }
+
+  .products::after {
+    background: url(..//img/Vector3@2x.png);
+    background-size: cover;
+  }
+
+  .products-wrapper::before {
+    background: url(..//img/Vector@2x.png);
+    background-size: cover;
+  }
+
+  .whycu-list::before {
+    background: url(..//img/but-first-coffee-smash@2x.png);
+    background-size: cover;
+  }
+
+  .hiw::after {
+    background: url(..//img/but-first-coffee@2x.png);
+    background-size: cover;
+  }
+
 }

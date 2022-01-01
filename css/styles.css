@@ -112,6 +112,14 @@ header {
   margin-right: 8px;
 }
 
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo-link:active {
+  opacity: 0.6;
+}
+
 .logo-title {
   width: 203px;
   height: 24px;
@@ -579,6 +587,14 @@ footer {
   height: 30px;
 }
 
+.footer-sm-icons:hover {
+  fill: #0A775F;
+}
+
+.footer-sm-icons:active {
+  opacity: 0.6;
+}
+
 /* MEDIA */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min--moz-device-pixel-ratio: 2),
@@ -845,9 +861,214 @@ only screen and (min-resolution: 2dppx) {
 
 .hero-cp {
   width: 1400px;
-  background: #0A775F;
+  background: #F8F8F2;
   background-image: url(../img/generaly-bg.png);
   background-blend-mode: overlay;
   margin: 0 auto 50px;
   padding: 50px 0;
+}
+
+.hero-cp-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.hero-cp-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  margin-right: 340px;
+}
+
+.hero-cp-nav {
+  text-align: left;
+  list-style: none;
+  width: 230px;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-cp-nav:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.hero-cp-nav-btn {
+  background-color: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #555555;
+  padding: 0 0 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-cp-nav-btn:hover {
+  color: #000000ab;
+  border-bottom: 3px dashed #c99b67ab
+}
+
+.active-btn {
+  color: #000000;
+  border-bottom: 3px dashed #C99B67;
+}
+
+.hero-cp-list {
+  width: 660px;
+  position: relative;
+  padding: 0;
+}
+
+.hero-cp-items {
+  margin-bottom: 60px;
+}
+
+.hero-cp-items:first-child:after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/Vector2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 135px;
+  height: 431px;
+  top: 60px;
+  right: -164px;
+}
+
+.hero-cp-items:first-child::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/Vector.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 240px;
+  height: 370px;
+  top: 600px;
+  left: -620px;
+}
+
+.hero-cp-items-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 47px;
+  font-variant: small-caps;
+  text-align: left;
+  color: #000000;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0 84px 0 0;
+  border: none;
+  margin-bottom: 20px;
+  position: relative;
+  background-image: url(..//img/down-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: top 18px right 18px;
+}
+
+.hero-cp-items-header:hover {
+  color: #0A775F;
+}
+
+.hero-cp-items-header:active {
+  opacity: 0.8;
+}
+
+.hero-cp-items-header::after {
+  content: "";
+  position: absolute;
+  background-image: url(..//img/down-icon.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  background-position: top 35px, right 18px;
+}
+
+.hero-cp-items-var {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-cp-items-title {
+  margin: 0;
+  padding: 0;
+  width: 208px;
+  height: 220px;
+  color: #333;
+  background-color: rgba(10, 119, 95, 0.2);
+  padding: 30px 12px 10px 16px;
+  cursor: pointer;
+}
+
+.hero-cp-items-title:hover {
+  background: #0a775fad;
+  color: #f3f3f3;
+}
+
+.hero-cp-items-title-active {
+  background: #0A775F;
+  color: #fff;
+}
+
+.hero-cp-items-title:not(:last-child) {
+  margin-right: 18px;
+}
+
+.hero-cp-items-title-header {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  font-variant: small-caps;
+  margin: 0 0 10px;
+}
+
+.hero-cp-items-title-text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hero-cp-order {
+  width: 100%;
+  background: #C99B67;
+  padding: 40px 20px;
+  margin: 100px 0 20px;
+}
+
+.hero-cp-order-header {
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  margin: 0 0 14px;
+}
+
+.hero-cp-order-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FFFFFF;
+  margin: 0;
+  display: block;
+}
+
+.hero-cp-order-text span {
+  color: #333;
+}
+
+.hero-cp-order-link-wrapper {
+  display: flex;
+  align-items: end;
+}
+
+.hero-cp-list .header-inner-link {
+  margin-left: auto;
 }

@@ -239,46 +239,44 @@ header {
   background-image: url(../img/generaly-bg.png);
   background-blend-mode: overlay;
   margin: 0 auto 20px;
-  position: relative;
+  /* position: relative; */
 }
 
-.hero::before {
-  content: "";
-  background: url(..//img/Vector2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 135px;
-  height: 431px;
-  top: 700px;
-  right: -30px;
-}
-
-.hero::after {
-  content: "";
-  background: url(..//img/Vector3.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 140px;
-  height: 300px;
-  left: -30px;
-  bottom: 170px;
+.hero-head {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  font-variant: small-caps;
+  color: #000000;
 }
 
 .hero-wrapper {
   position: relative;
+  padding: 0;
+  margin: 30px 255px 0;
+  padding-bottom: 50px;
 }
 
 .hero-wrapper::before {
   content: "";
   background: url(..//img/Vector.png);
-  background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   width: 240px;
   height: 370px;
   top: -150px;
-  left: -315px;
+  left: -305px;
+}
+
+.hero-wrapper::after {
+  content: "";
+  background: url(..//img/Vector2.png) no-repeat;
+  position: absolute;
+  width: 135px;
+  height: 431px;
+  top: 570px;
+  right: -305px;
 }
 
 .hero-header {
@@ -290,17 +288,21 @@ header {
   line-height: 59px;
 }
 
-.hero-wrapper {
-  padding: 0;
-  margin: 30px 255px 0;
-  padding-bottom: 50px;
-}
-
 .hero-items {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.hero-items:last-child:after {
+  content: "";
+  background: url(..//img/Vector3.png) no-repeat;
+  position: absolute;
+  width: 140px;
+  height: 300px;
+  left: -305px;
+  bottom: 170px;
 }
 
 .hero-items:nth-child(even) {
@@ -932,9 +934,7 @@ only screen and (min-resolution: 2dppx) {
 .hero-cp-items:first-child:after {
   content: "";
   position: absolute;
-  background-image: url(../img/Vector2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(../img/Vector2.png) no-repeat;
   width: 135px;
   height: 431px;
   top: 60px;
@@ -944,12 +944,20 @@ only screen and (min-resolution: 2dppx) {
 .hero-cp-items:first-child::before {
   content: "";
   position: absolute;
-  background-image: url(../img/Vector.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(../img/Vector.png) no-repeat;
   width: 240px;
   height: 370px;
   top: 600px;
+  left: -620px;
+}
+
+.nth-item:before {
+  content: "";
+  position: absolute;
+  background: url(../img/Vector3.png) no-repeat;
+  width: 135px;
+  height: 431px;
+  top: 1460px;
   left: -620px;
 }
 

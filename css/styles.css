@@ -961,7 +961,7 @@ only screen and (min-resolution: 2dppx) {
   left: -620px;
 }
 
-.hero-cp-items-header {
+.hero-cp-items-heading {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 35px;
@@ -981,15 +981,15 @@ only screen and (min-resolution: 2dppx) {
   background-position: top 18px right 18px;
 }
 
-.hero-cp-items-header:hover {
+.hero-cp-items-heading:hover {
   color: #0A775F;
 }
 
-.hero-cp-items-header:active {
+.hero-cp-items-heading:active {
   opacity: 0.8;
 }
 
-.hero-cp-items-header::after {
+.hero-cp-items-heading::after {
   content: "";
   position: absolute;
   background-image: url(..//img/down-icon.svg);
@@ -1029,7 +1029,7 @@ only screen and (min-resolution: 2dppx) {
   margin-right: 18px;
 }
 
-.hero-cp-items-title-header {
+.hero-cp-items-title-heading {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
